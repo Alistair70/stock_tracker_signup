@@ -31,7 +31,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     
     //If checks are cleared request is sent to add account to database
     else{
-        fetch('/signup_user', {
+        fetch('https://stock-tracker-l64w.onrender.com/signup_user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
                 document.getElementById("output").innerHTML = "Username Exists";
             else if(data.message === 'success')
                 //If account creation is successful, user is redirected to login page.
-                location.href="login"
+                window.location.href="https://stock-tracker-login.expense-tracker-demo.site"
         });
     }
 });
@@ -62,6 +62,6 @@ function cookieCheck()
     if(document.cookie.split(';').some((item) => item.trim().startsWith(`${cookie_name}=`)))
     {
         console.log("true")
-        window.location.href = "/dash";
+        window.location.href = "https://stock-tracker-dashboard.expense-tracker-demo.site";
     }
 }
