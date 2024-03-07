@@ -61,7 +61,6 @@ function cookieCheck()
     cookie_name = "stock_tracker_cookie_container"
     if(document.cookie.split(';').some((item) => item.trim().startsWith(`${cookie_name}=`)))
     {
-        console.log("true")
         window.location.href = "https://stock-tracker-dashboard.expense-tracker-demo.site";
     }
 }
